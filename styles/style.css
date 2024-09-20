@@ -55,6 +55,7 @@ ol {
   margin-bottom: 16px;
   width: 711px;
   height: 456px;
+  position: relative;
 }
 
 .result__video {
@@ -72,6 +73,7 @@ ol {
 .content__list {
   height: 100%;
   overflow-y: auto;
+  position: relative;
 }
 
 .content__list-item:not(:last-child) {
@@ -98,8 +100,57 @@ ol {
 
 .content__details {
   width: 100%;
-  max-height: 434px;
+  max-height: 534px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.preloader {
+  position: absolute;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #fff;
+  padding: 0 173px 5px 0;
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__video-card {
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
 }
