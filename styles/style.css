@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,8 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,
@@ -48,9 +51,16 @@ ol {
   gap: 30px;
 }
 
-/*.result__video-container {
+.result__video-container {
   margin-bottom: 16px;
-} */
+  width: 711px;
+  height: 456px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+}
 
 .search-form {
   display: flex;
@@ -64,9 +74,31 @@ ol {
   overflow-y: auto;
 }
 
-.content__details {
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
   width: 100%;
   height: 100%;
+}
+
+.content__details {
+  width: 100%;
+  max-height: 434px;
   display: flex;
   flex-direction: column;
   gap: 30px;
