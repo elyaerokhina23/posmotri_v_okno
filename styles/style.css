@@ -154,3 +154,62 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
 }
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.button {
+  border: 1px solid #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  padding: 6px 74px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.search-form__submit-button {
+  align-self: end;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.search-form__textfield {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.6px;
+  border: 1px solid transparent;
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+  background-color: transparent;
+  appearance: none;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
