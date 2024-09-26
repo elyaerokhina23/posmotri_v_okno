@@ -52,13 +52,15 @@ ol {
 .result__video-container {
   margin-bottom: 16px;
   width: 711px;
-  height: 456px;
+  height: 356px;
   position: relative;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
 .search-form {
@@ -68,10 +70,15 @@ ol {
   align-items: flex-start;
 }
 
+.content__details {
+  height: 534px;
+}
+
 .content__list {
   height: 100%;
   overflow-y: auto;
   position: relative;
+  height: 300px;
 }
 
 .content__list-item:not(:last-child) {
@@ -96,6 +103,13 @@ ol {
   height: 100%;
 }
 
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+}
+
 .content__details {
   width: 100%;
   max-height: 534px;
@@ -114,7 +128,7 @@ ol {
   font-size: 18px;
   line-height: 21.6px;
   color: #fff;
-  padding: 0 173px 5px 0;
+  padding: 0 115px 5px 0;
 }
 
 .title {
@@ -147,12 +161,17 @@ ol {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 6px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  max-width: 200px;
 }
 
 .visually-hidden {
@@ -172,10 +191,11 @@ fieldset {
 .search-form__label {
   display: inline-flex;
   width: fit-content;
+  align-items: center;
 }
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -200,15 +220,19 @@ fieldset {
   font-size: 18px;
   line-height: 21.6px;
   border: 1px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
+  border-top-color: currentColor;
+  border-bottom-color: currentColor;
   background-color: transparent;
   appearance: none;
+  color: #fff;
+  width: 225px;
+  text-overflow: ellipsis;
 }
 
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
+  cursor: pointer;
 }
 
 /* Работа с фокусом для кнопок, полей и чекбоксов */
@@ -231,6 +255,22 @@ fieldset {
   display: flex;
 }
 
+.search-form {
+  text-decoration: inherit;
+}
+
+.button {
+  text-decoration: inherit;
+  outline: none;
+}
+
+.content__card-link {
+  text-decoration: inherit;
+  background-color: inherit;
+  outline: none;
+}
+
+/* Для чекбоксов */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   width: 15px;
@@ -239,10 +279,12 @@ fieldset {
   margin: auto;
 }
 
-.search-form__label-text:hover {
+/* Для лейблов */
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
+/* Для кнопок */
 .button:active {
   background-color: #545050;
 }
@@ -251,23 +293,14 @@ fieldset {
   text-decoration: underline;
 }
 
-.button:focus {
-  outline: none;
-}
-
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
 
 /* Работа с фокусом карточек */
-
 .content__card-link_current {
   background-color: #545050;
-}
-
-.content__card-link:focus {
-  outline: none;
 }
 
 .content__card-link:focus-visible {
