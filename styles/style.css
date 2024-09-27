@@ -59,7 +59,7 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: 50% 50%;
 }
 
@@ -68,10 +68,6 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.content__details {
-  height: 534px;
 }
 
 .content__list {
@@ -112,7 +108,8 @@ ol {
 
 .content__details {
   width: 100%;
-  max-height: 534px;
+  min-height: 534px;
+  min-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -128,7 +125,7 @@ ol {
   font-size: 18px;
   line-height: 21.6px;
   color: #fff;
-  padding: 0 115px 5px 0;
+  padding: 0 0 8px 0;
 }
 
 .title {
@@ -142,12 +139,6 @@ ol {
 
 .content__accent {
   color: #545050;
-}
-
-.content__card-link {
-  text-decoration: none;
-  display: block;
-  margin: 2px;
 }
 
 .content__video-card {
@@ -218,7 +209,7 @@ fieldset {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  line-height: 21.6px;
+  line-height: 27px;
   border: 1px solid transparent;
   border-top-color: currentColor;
   border-bottom-color: currentColor;
@@ -232,7 +223,6 @@ fieldset {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  cursor: pointer;
 }
 
 /* Работа с фокусом для кнопок, полей и чекбоксов */
@@ -253,6 +243,7 @@ fieldset {
   background-color: transparent;
   margin-right: 5px;
   display: flex;
+  cursor: pointer;
 }
 
 .search-form {
@@ -268,6 +259,8 @@ fieldset {
   text-decoration: inherit;
   background-color: inherit;
   outline: none;
+  display: block;
+  margin: 2px;
 }
 
 /* Для чекбоксов */
@@ -305,7 +298,6 @@ fieldset {
 
 .content__card-link:focus-visible {
   outline: 1px solid #fff;
-  outline-offset: 2px;
 }
 
 .content__card-link:hover {
@@ -316,3 +308,5 @@ fieldset {
 .content__card-link:active {
   background-color: #545050;
 }
+
+/* Окно ошибки */
