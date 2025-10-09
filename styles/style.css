@@ -52,7 +52,7 @@ ol {
 .result__video-container {
   margin-bottom: 16px;
   width: 711px;
-  height: 356px;
+  height: 386px;
   position: relative;
 }
 
@@ -104,19 +104,20 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__details {
   width: 100%;
-  min-height: 534px;
   min-width: 399px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
-
-.preloader {
-  position: absolute;
 }
 
 .search-form__fieldset-title {
@@ -155,13 +156,6 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 200px;
-}
-
-.content__video-card-description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 16.2px;
   max-width: 200px;
 }
 
